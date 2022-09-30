@@ -20,6 +20,12 @@ const PositionTable = ({asesor, index}) => {
   )
 }
 
+const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
+
+const obtenerMes = () => {
+  const date = new Date()
+  return meses[date.getMonth()]
+}
 
 function App() {
 
@@ -29,7 +35,7 @@ function App() {
     <div className="crmCenterh">
       <div className="crmContainer">
         <div className="crmLeaderboardHeader">
-          <h1>Top asesores septiembre</h1>
+          <h1>Top participanes de {obtenerMes()}</h1>
           <div className="asesores">
             <div className="asesor"><div className="thirdplace"><div className="numberPosition"
             style={{backgroundColor: "#CD7F32"}}
